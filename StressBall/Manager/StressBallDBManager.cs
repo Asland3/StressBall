@@ -86,6 +86,7 @@ public class StressBallDBManager
     public StressBallData Delete(int id)
     {
         StressBallData stressball = _stressBallContext.StressBall.Find(id);
+        if (stressball == null) return null;
         _stressBallContext.StressBall.Remove(stressball);
         _stressBallContext.SaveChanges();
         return stressball;

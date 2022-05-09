@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPBrodcaster", "UDPBrodcas
 		{8E6FEE0B-C493-4DDB-818E-E05C22BB53FE} = {8E6FEE0B-C493-4DDB-818E-E05C22BB53FE}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StressBallTests", "StressBallTests\StressBallTests.csproj", "{0E0DB1C6-0C38-42B0-A8B3-292043EF0B1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{EE57A851-27D6-42B0-B28F-59C02A5AEB46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE57A851-27D6-42B0-B28F-59C02A5AEB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE57A851-27D6-42B0-B28F-59C02A5AEB46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0DB1C6-0C38-42B0-A8B3-292043EF0B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0DB1C6-0C38-42B0-A8B3-292043EF0B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0DB1C6-0C38-42B0-A8B3-292043EF0B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0DB1C6-0C38-42B0-A8B3-292043EF0B1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
