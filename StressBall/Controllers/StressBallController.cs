@@ -36,7 +36,7 @@ namespace StressBall.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpGet]
-        public ActionResult<List<StressBallData>> GetAll([FromQuery] string? accelerationFilter, [FromQuery] DateTime? dateTimeFilter)
+        public ActionResult<List<StressBallData>> GetAll([FromQuery] double? accelerationFilter, [FromQuery] DateTime? dateTimeFilter)
         {
             List<StressBallData> stressBalls = _stressBallManager.GetAll(accelerationFilter, dateTimeFilter);
 
@@ -96,13 +96,15 @@ namespace StressBall.Controllers
         [HttpPost]
         public ActionResult<StressBallData> Post([FromBody] StressBallData newStressBall)
         {
+            StressBallData stressball = new StressBallData();
+
             if (newStressBall.Speed == null || newStressBall.DateTimeNow == null)
             {
                 return BadRequest(newStressBall);
             }
 
-            StressBallData createdItem = _stressBallManager.Add(newStressBall);
-            return _stressBallManager.Add(newStressBall);
+            stressball = _stressBallManager.Add(newStressBall);
+            return Created("api/stressball/" + stressball.Id, stressball);
         }
 
         /// <summary>

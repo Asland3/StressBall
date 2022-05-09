@@ -23,7 +23,7 @@ public class StressBallDBManager
     /// <param name="accelerationFilter"></param>
     /// <param name="dateTimeFilter"></param>
     /// <returns></returns>
-    public List<StressBallData> GetAll(string? accelerationFilter, DateTime? dateTimeFilter)
+    public List<StressBallData> GetAll(double? accelerationFilter, DateTime? dateTimeFilter)
     {
         List<StressBallData> result = new List<StressBallData>(_stressBallContext.StressBall);
 
