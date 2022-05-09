@@ -35,7 +35,7 @@ namespace StressBall
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StressBall2", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "StressBall102", Version = "v1" });
             });
 
             services.AddDbContext<StressBallContext>(opt => opt.UseSqlServer(StressBallContext.ConnectionString));
