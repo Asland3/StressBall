@@ -1,6 +1,7 @@
 ﻿using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
+using Microsoft.VisualBasic;
 using StressBall;
 
 Random randomSpeed = new Random();
@@ -18,6 +19,7 @@ using (UdpClient socket = new UdpClient())
             Id = 100,
             //Speed = (randomSpeed.Next(30, 150)).ToString(),
             DateTimeNow = new DateTime(2022, 10, 3)
+            
         };
         string message = JsonSerializer.Serialize(stressBallData);
         byte[] data = Encoding.UTF8.GetBytes(message);

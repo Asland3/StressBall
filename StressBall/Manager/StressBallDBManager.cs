@@ -20,21 +20,21 @@ public class StressBallDBManager
     /// <summary>
     /// Returns a list of stress balls if acceleration and date time is null otherwise it returns a filtered list
     /// </summary>
-    /// <param name="accelerationFilter"></param>
+    /// <param name="speedFilter"></param>
     /// <param name="dateTimeFilter"></param>
     /// <returns></returns>
-    public List<StressBallData> GetAll(double? accelerationFilter, DateTime? dateTimeFilter)
+    public List<StressBallData> GetAll(double? speedFilter, DateTime? dateTimeFilter)
     {
         List<StressBallData> result = new List<StressBallData>(_stressBallContext.StressBall);
-
-        /*if (!string.IsNullOrWhiteSpace(accelerationFilter))
-        {
-            result = result.FindAll(filterItem => filterItem.Speed.Contains(accelerationFilter, StringComparison.OrdinalIgnoreCase));
-        }*/
 
         if (dateTimeFilter != null)
         {
             result = result.FindAll(filterItem => filterItem.DateTimeNow.Equals(dateTimeFilter));
+        }
+        
+        if (speedFilter != null)
+        {
+            result = result.FindAll(filterItem => filterItem.Speed.Equals(speedFilter));
         }
 
         return result.ToList();
