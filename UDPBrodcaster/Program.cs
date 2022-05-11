@@ -17,7 +17,7 @@ using (UdpClient socket = new UdpClient())
         StressBallData stressBallData = new StressBallData()
         {
             Id = 100,
-            //Speed = (randomSpeed.Next(30, 150)).ToString(),
+            Speed = (randomSpeed.Next(30, 150)),
             DateTimeNow = new DateTime(2022, 10, 3)
             
         };

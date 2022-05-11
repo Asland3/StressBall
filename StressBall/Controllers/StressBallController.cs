@@ -106,7 +106,7 @@ namespace StressBall.Controllers
             stressball = _stressBallManager.Add(newStressBall);
             return Created("api/stressball/" + stressball.Id, stressball);
         }
-
+        
         /// <summary>
         /// Deletes an stress ball found by id
         /// </summary>
